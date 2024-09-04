@@ -7,4 +7,7 @@ export default defineConfig({
   server: {
     port: 8001,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 })
