@@ -40,15 +40,15 @@ const Skills = () => {
   const renderSkill = (skill, index) => (
     <div
       key={index}
-      className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
+      className="border-2 group border-cyan-600 relative min-w-[10em] max-w-[16em] bg-gray-900"
     >
       <div
         style={{
           background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
         }}
-        className="w-28 h-28 flex items-center justify-center rounded-full"
+        className="w-28 h-28 items-center justify-center rounded-full"
       >
-        <div className="text-6xl w-20 h-20 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
+        <div className="text-6xl w-10 h-30 bg-gray-900 rounded-full justify-center group-hover:text-cyan-600">
           <img src={skill.logo} alt={skill.name} className="w-10 h-10" />
         </div>
       </div>
@@ -58,21 +58,21 @@ const Skills = () => {
   );
 
   return (
-    <section id="skills" className="py-10 bg-gray-800 relative">
+    <section id="skills" className="py-10 bg-gray-800">
       <div className="mt-8 text-gray-100 text-center">
-        <h3 className="text-4xl font-semibold">
+        <h3 className="text-4xl font-bold">
           My <span className="text-cyan-600">Skills</span>
         </h3>
-        <p className="text-gray-400 mt-3 text-3xl">Frontend</p>
-        <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
+        <p className="text-gray-400 mt-3 text-xl">Frontend</p>
+        <div className="flex items-center justify-center mt-12 gap-10">
           {frontendSkills.map(renderSkill)}
         </div>
-        <p className="text-gray-400 mt-12 text-3xl">Backend</p>
-        <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
+        <p className="text-gray-400 mt-12 text-1xl">Backend</p>
+        <div className="flex items-center justify-center mt-20 gap-10">
           {backendSkills.map(renderSkill)}
         </div>
         <p className="text-gray-400 mt-12 text-3xl">Tools</p>
-        <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
+        <div className="flex items-center justify-center">
           {tools.map(renderSkill)}
         </div> 
       </div>
